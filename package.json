@@ -1,5 +1,5 @@
 {
-  "name": "react-select",
+  "name": "react-select-custom",
   "version": "0.6.7",
   "description": "A Select control built with and for ReactJS",
   "main": "lib/Select.js",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JedWatson/react-select.git"
+    "url": "git+https://github.com/searahbkim/react-select-custom.git"
   },
   "dependencies": {
     "classnames": "^2.1.3",
