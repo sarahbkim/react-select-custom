@@ -175,7 +175,7 @@ var Select = React.createClass({
 					newProps.placeholder)
 				);
 			};
-			if (this.props.asyncOptions) {
+			if (this.props.asyncOptions && newProps.value) {
 				this.loadAsyncOptions(newProps.value, {}, setState);
 			} else {
 				setState();
@@ -753,11 +753,11 @@ var Select = React.createClass({
 		});
 		var value = [];
 		if (this.props.multi) {
-			this.state.values.forEach(function(val) {
+			this.state.values.forEach(function(val, idx) {
 				var onOptionLabelClick = this.handleOptionLabelClick.bind(this, val);
 				var onRemove = this.removeValue.bind(this, val);
 				var valueComponent = React.createElement(this.props.valueComponent, {
-					key: val.value,
+					key: idx, 
 					option: val,
 					renderer: this.props.valueRenderer,
 					optionLabelClick: !!this.props.onOptionLabelClick,
